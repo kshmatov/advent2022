@@ -19,3 +19,4 @@
 .fleet
 
 bin
+*.txt
