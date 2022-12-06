@@ -14,7 +14,7 @@ func main() {
 		return
 	}
 	fn := os.Args[1]
-	vals, err := lib.ReadStringFile(fn)
+	vals, err := lib.ReadStringsFile(fn)
 	if err != nil {
 		panic(err)
 	}
