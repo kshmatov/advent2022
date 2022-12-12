@@ -177,7 +177,7 @@ func TestRun(t *testing.T) {
 	assert.Equal(t, []int{105, 101}, res)
 }
 
-func TestBIGRun(t *testing.T) {
+func TestBIGRun1(t *testing.T) {
 	m, err := BuildMokeyList(data, 4, 0)
 	if !assert.Nil(t, err) {
 		return
@@ -188,7 +188,10 @@ func TestBIGRun(t *testing.T) {
 	assert.Equal(t, 3, m.data[2].cnt)
 	assert.Equal(t, 6, m.data[3].cnt)
 
-	m, err = BuildMokeyList(data, 4, 0)
+}
+
+func TestBIGRun20(t *testing.T) {
+	m, err := BuildMokeyList(data, 4, 0)
 	if !assert.Nil(t, err) {
 		return
 	}
@@ -197,8 +200,10 @@ func TestBIGRun(t *testing.T) {
 	assert.Equal(t, 97, m.data[1].cnt)
 	assert.Equal(t, 8, m.data[2].cnt)
 	assert.Equal(t, 103, m.data[3].cnt)
+}
 
-	m, err = BuildMokeyList(data, 4, 0)
+func TestBIGRun1000(t *testing.T) {
+	m, err := BuildMokeyList(data, 4, 0)
 	if !assert.Nil(t, err) {
 		return
 	}
@@ -208,7 +213,10 @@ func TestBIGRun(t *testing.T) {
 	assert.Equal(t, 199, m.data[2].cnt)
 	assert.Equal(t, 5192, m.data[3].cnt)
 
-	m, err = BuildMokeyList(data, 4, 0)
+}
+
+func TestBIGRun2000(t *testing.T) {
+	m, err := BuildMokeyList(data, 4, 0)
 	if !assert.Nil(t, err) {
 		return
 	}
@@ -218,7 +226,10 @@ func TestBIGRun(t *testing.T) {
 	assert.Equal(t, 392, m.data[2].cnt)
 	assert.Equal(t, 10391, m.data[3].cnt)
 
-	m, err = BuildMokeyList(data, 4, 0)
+}
+
+func TestBIGRun3000(t *testing.T) {
+	m, err := BuildMokeyList(data, 4, 0)
 	if !assert.Nil(t, err) {
 		return
 	}
@@ -227,8 +238,10 @@ func TestBIGRun(t *testing.T) {
 	assert.Equal(t, 14358, m.data[1].cnt)
 	assert.Equal(t, 587, m.data[2].cnt)
 	assert.Equal(t, 15593, m.data[3].cnt)
+}
 
-	m, err = BuildMokeyList(data, 4, 0)
+func TestBIGRun5000(t *testing.T) {
+	m, err := BuildMokeyList(data, 4, 0)
 	if !assert.Nil(t, err) {
 		return
 	}
@@ -238,7 +251,10 @@ func TestBIGRun(t *testing.T) {
 	assert.Equal(t, 974, m.data[2].cnt)
 	assert.Equal(t, 26000, m.data[3].cnt)
 
-	m, err = BuildMokeyList(data, 4, 0)
+}
+
+func TestBIGRun10000(t *testing.T) {
+	m, err := BuildMokeyList(data, 4, 0)
 	if !assert.Nil(t, err) {
 		return
 	}
