@@ -50,7 +50,7 @@ func TestParseMonkey(t *testing.T) {
 	}
 	assert.Equal(t, 0, i)
 	assert.Equal(t, worryLevel(1501), m.op())
-	assert.Equal(t, uint(23), m.test)
+	assert.Equal(t, int(23), m.test)
 	assert.Equal(t, 2, m.ifTrue)
 	assert.Equal(t, 3, m.ifFalse)
 }
@@ -64,7 +64,7 @@ func TestBuildShort(t *testing.T) {
 		return
 	}
 	assert.Equal(t, worryLevel(1501), m.data[0].op())
-	assert.Equal(t, uint(23), m.data[0].test)
+	assert.Equal(t, int(23), m.data[0].test)
 	assert.Equal(t, 2, m.data[0].ifTrue)
 	assert.Equal(t, 3, m.data[0].ifFalse)
 }
@@ -73,7 +73,7 @@ func TestBuildFull(t *testing.T) {
 	res := []struct {
 		items   int
 		op      worryLevel
-		test    uint
+		test    int
 		ifTrue  int
 		ifFalse int
 	}{
